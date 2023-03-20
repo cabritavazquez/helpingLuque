@@ -26,6 +26,9 @@ namespace bblProgII{
 
 
         class Alojamiento{
+        public:
+
+        
 // ----- MÉTODOS PÚBLICOS DE LA CLASE Alojamiento
 
         // Constructor por defecto.
@@ -197,8 +200,12 @@ namespace bblProgII{
         // (IMPLEMENTADO POR EL PROFESOR)
         bool operator==(const Alojamiento &otro_alojamiento) const;
 
-    // ----- PARTE PRIVADA DE LA CLASE Alojamiento
 
+
+    // ----- PARTE PRIVADA DE LA CLASE Alojamiento
+        private:
+
+        
         // ATRIBUTOS
         unsigned id_alojamiento;      // Identificador (único) del alojamiento
         string nombre;              // Nombre del alojamiento
@@ -210,6 +217,7 @@ namespace bblProgII{
         double precio;              // Precio del alojamiento por cada día de estancia
         unsigned minimo_noches;       // Mínimo número de noches que se puede alquilar
         unsigned disponibilidad_365;  // Número de días al año que está disponible
+
 
         };
 

@@ -247,7 +247,8 @@ namespace bblProgII{
         static const int MAX_ALOJAMIENTOS = 3000;
 
         // Atributos
-        typedef array<Alojamiento, MAX_ALOJAMIENTOS> alojamientos; // array de alojamientos
+        typedef array<Alojamiento, MAX_ALOJAMIENTOS> Talojamientos; // array de alojamientos
+        Talojamientos alojamientos;
         unsigned num_alojamientos; // Número de alojamientos almacenados en la lista
 
         // -------------------------- MÉTODOS PRIVADOS
@@ -281,6 +282,11 @@ namespace bblProgII{
         // PRECONDICIÓN: posicion < num_alojamientos
         void cerrar_hueco(unsigned posicion);
 
+        void insertar_final(Alojamiento alojamiento);
+        bool buscar_alojamiento_ok(unsigned id_alojamiento) const;
+        unsigned buscar_alojamiento_pos(unsigned id_alojamiento);
+        void ordenar_alojamientos(Talojamientos &alojamientos);
+        double distancia_puntos(double latitud1, double longitud1, double latitud2, double longitud2);
 
 
         }; //cierra la class
